@@ -47,7 +47,7 @@ export const reducer = (state = initialState, action) => {
         case GET_TASK_NAME:
             return {...state, taskNameInput: action.payload}
         case CHANGE_SECONDS:
-            return {...state, seconds: parseInt((action.payload - state.startMoment)/1000)}
+            return {...state, seconds: state.startMoment ? parseInt((Date.now() - state.startMoment)/1000) : 0}
         case RESET_COUNT:
             return {...state, seconds: 0}
         default: 
