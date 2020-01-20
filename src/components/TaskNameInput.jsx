@@ -1,16 +1,25 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { changeTimer, inputTaskName } from '../store/actions'
 import TextField from '@material-ui/core/TextField'
 
-export const TaskNameInput = ({ data, edit, isTimerWorking, action, attentionBanner }) => {
+const TaskNameInput = props => {
+    const {
+        isTimerWorking,
+        attentionBanner,
+        taskNameInput,
+        changeTimer,
+        inputTaskName
+    } = props
     return(
         <>
             <div className={'inputTaskTrue'}>
-                <form onSubmit={action}>
+                <form onSubmit={changeTimer}>
                     <TextField 
                         id="standard-basic" 
                         label="Enter task name"
-                        value={data}
-                        onChange={edit}
+                        value={taskNameInput}
+                        onChange={e => inputTaskName(e.target.value)}
                         disabled={isTimerWorking}
                     />
                 </form>
@@ -19,3 +28,18 @@ export const TaskNameInput = ({ data, edit, isTimerWorking, action, attentionBan
         </>
     )
 }
+
+const mapStateToProps = state => {
+    return {
+        isTimerWorking: state.isTimerWorking,
+        attentionBanner: state.attentionBanner,
+        taskNameInput: state.taskNameInput,
+    }
+}
+
+const mapDispatchToProps = { 
+    changeTimer, 
+    inputTaskName, 
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TaskNameInput)
