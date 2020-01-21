@@ -114,7 +114,7 @@ tbody > tr:nth-child(2n) {
 }
 
 #attentionBanner {
-  width: 30%;
+  width: 20%;
   margin: 0 auto;
   height: 40px;
   background: linear-gradient(to bottom right, rgb(153, 0, 0), rgb(255, 43, 43));
@@ -126,7 +126,7 @@ tbody > tr:nth-child(2n) {
   border-radius: 40px;
   position: absolute;
   top: 10px;
-  left: 35%;
+  left: 40%;
   animation: bounce ease-out 0.4s;
   animation-iteration-count: 1;
   transform-origin: 50% 50%;
