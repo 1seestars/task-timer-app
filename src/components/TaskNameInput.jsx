@@ -24,7 +24,7 @@ const TaskNameInput = props => {
                     />
                 </form>
             </div>
-            {attentionBanner ? <div id="attentionBanner">Attention! Enter your task name!</div> : null}
+            {attentionBanner ? <div id="attentionBanner">Enter your task name!</div> : null}
         </>
     )
 }

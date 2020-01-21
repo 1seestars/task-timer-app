@@ -5,6 +5,6 @@ import { reducer } from './store/reducers'
 import { createStore } from 'redux'
 import Root from './components/Root';
 
-const store = createStore(reducer)
+export const store = createStore(reducer)
 
 ReactDOM.render(<Root store={store} />, document.getElementById('root'));

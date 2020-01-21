@@ -5,12 +5,9 @@ import Timer from './Timer';
 import TaskNameInput from './TaskNameInput';
 import { StartStopButton } from './StartStopButton';
 import { ScoreTable } from './ScoreTable';
+import { store } from '../index'
 
 class MainComponent extends React.Component{
-    componentWillUnmount(){
-        localStorage.setItem('redux-store', JSON.stringify(this.props.state))
-    }
-
     render(){
         const { 
             doneTasks,
@@ -38,5 +35,11 @@ const mapStateToProps = state => {
 const mapDispatchToProps = { 
     changeTimer, 
 }
+
+const setStateToLocalStorage = store => {
+    localStorage.setItem('redux-store', JSON.stringify(store.getState()))
+}
+
+window.addEventListener('beforeunload', () => setStateToLocalStorage(store))
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainComponent)
