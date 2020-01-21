@@ -146,3 +146,13 @@ tbody > tr:nth-child(2n) {
     transform:  translate(0px,0px)  ;
   }
 }
+
+.return {
+  width: 200px;
+  margin: 2vw auto;
+  text-align: center;
+}
+
+#return-to-main {
+  text-decoration: none;
+}
