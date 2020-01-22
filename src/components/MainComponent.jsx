@@ -28,12 +28,11 @@ class MainComponent extends React.Component{
 const mapStateToProps = state => {
     return {
         doneTasks: state.doneTasks,
-        state
     }
 }
 
 const mapDispatchToProps = { 
-    changeTimer, 
+    changeTimer
 }
 
 const setStateToLocalStorage = store => {

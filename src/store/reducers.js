@@ -1,7 +1,4 @@
-import { CHANGE_TIMER } from './actions.js'
-import { GET_TASK_NAME } from './actions.js'
-import { CHANGE_SECONDS } from './actions.js'
-import { RESET_COUNT } from './actions.js'
+import { CHANGE_TIMER, GET_TASK_NAME, CHANGE_SECONDS, RESET_COUNT, REMOVE_ITEM } from './actions.js'
 
 let initialState
 
@@ -50,6 +47,8 @@ export const reducer = (state = initialState, action) => {
             return {...state, seconds: state.startMoment ? parseInt((Date.now() - state.startMoment)/1000) : 0}
         case RESET_COUNT:
             return {...state, seconds: 0}
+        case REMOVE_ITEM:
+            return {...state, doneTasks: state.doneTasks.filter(elem => elem.id !== action.payload) }
         default: 
             return state
     }

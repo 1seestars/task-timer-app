@@ -65,11 +65,30 @@ th:last-child {
   text-decoration: none;
 }
 
-.itemRoute:hover {
+.wrapperTableItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+
+.removeButton {
+  color: white;
+  width: 25px;
+  height: 25px;
+  background: rgb(235, 0, 0);
+  border: none;
+  border-radius: 50%;
+  line-height: 25px;
+  font-size: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* .itemRoute:hover {
   border: 2px solid #303f9f;
   border-radius: 5px;
   padding: 2%;
-}
+} */
 
 #clock {
   width: 400px;
