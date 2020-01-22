@@ -48,7 +48,7 @@ export const reducer = (state = initialState, action) => {
         case RESET_COUNT:
             return {...state, seconds: 0}
         case REMOVE_ITEM:
-            return {...state, doneTasks: state.doneTasks.filter(elem => elem.id !== action.payload) }
+            return {...state, doneTasks: state.doneTasks.filter(elem => elem.id !== action.payload)}
         default: 
             return state
     }

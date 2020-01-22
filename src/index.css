@@ -82,6 +82,12 @@ th:last-child {
   font-size: 20px;
   padding: 0;
   cursor: pointer;
+  outline: none;
+}
+
+.removeButton:active {
+  transform: scale(1.1);
+  transition: 0.1s;
 }
 
 /* .itemRoute:hover {
