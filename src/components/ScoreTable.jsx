@@ -4,7 +4,7 @@ import RemoveButton from './RemoveButton'
 
 export const ScoreTable = ({ data }) => {
     return(
-        <table className={data.length ? "tableTrue" : "tableFalse"}>
+        <table style={data.length ? {} : {display: 'none'}}>
             <thead>
                 <tr className="headRow">
                     <th>№</th>

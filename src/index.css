@@ -5,23 +5,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 #wrapper {
   width: 70%;
   margin: 0 auto;
 }
 
-.tableTrue {
+table {
   border-collapse: collapse;
   width: 100%;
-}
-
-.tableFalse {
-  display: none;
 }
 
 table, th, td {
@@ -85,16 +76,10 @@ th:last-child {
   outline: none;
 }
 
-.removeButton:active {
+.removeButton:hover {
   transform: scale(1.1);
-  transition: 0.1s;
+  transition: 0.2s;
 }
-
-/* .itemRoute:hover {
-  border: 2px solid #303f9f;
-  border-radius: 5px;
-  padding: 2%;
-} */
 
 #clock {
   width: 400px;
